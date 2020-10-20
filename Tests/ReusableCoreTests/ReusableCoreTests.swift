@@ -7,6 +7,11 @@ final class ReusableCoreTests: XCTestCase {
         XCTAssertEqual(color, .red)
     }
 
+    func testReusableColorAreEqual() {
+        let color = ReusableCore.colorFromHexString("006736")
+        XCTAssertEqual(color, ReusableCore.razeColor)
+    }
+
     static var allTests = [
         ("testColorRedEqual", testColorRedEqual)
     ]
