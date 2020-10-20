@@ -7,12 +7,19 @@ final class ReusableCoreTests: XCTestCase {
         XCTAssertEqual(color, .red)
     }
 
-    func testReusableColorAreEqual() {
+    func testRazeColorsAreEqual() {
         let color = ReusableCore.colorFromHexString("006736")
         XCTAssertEqual(color, ReusableCore.razeColor)
     }
 
+    func testSecondaryRazeColorsAreEqual() {
+        let color = ReusableCore.colorFromHexString("FCFFFD")
+        XCTAssertEqual(color, ReusableCore.secondaryRazeColor)
+    }
+
     static var allTests = [
-        ("testColorRedEqual", testColorRedEqual)
+        ("testColorRedEqual", testColorRedEqual),
+        ("testRazeColorsAreEqual", testRazeColorsAreEqual),
+        ("testSecondaryRazeColorsAreEqual", testSecondaryRazeColorsAreEqual)
     ]
 }
