@@ -1,20 +1,20 @@
 import XCTest
 @testable import ReusableCore
 
-final class ReusableCoreTests: XCTestCase {
+final class ColorTests: XCTestCase {
     func testColorRedEqual() {
-        let color = ReusableCore.colorFromHexString("FF0000")
+        let color = ReusableCore.Color.fromHexString("FF0000")
         XCTAssertEqual(color, .red)
     }
 
     func testRazeColorsAreEqual() {
-        let color = ReusableCore.colorFromHexString("006736")
-        XCTAssertEqual(color, ReusableCore.razeColor)
+        let color = ReusableCore.Color.fromHexString("006736")
+        XCTAssertEqual(color, ReusableCore.Color.razeColor)
     }
 
     func testSecondaryRazeColorsAreEqual() {
-        let color = ReusableCore.colorFromHexString("FCFFFD")
-        XCTAssertEqual(color, ReusableCore.secondaryRazeColor)
+        let color = ReusableCore.Color.fromHexString("FCFFFD")
+        XCTAssertEqual(color, ReusableCore.Color.secondaryRazeColor)
     }
 
     static var allTests = [
